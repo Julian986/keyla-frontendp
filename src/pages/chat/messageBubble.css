@@ -1,0 +1,114 @@
+/* Estilos base para el contenedor del mensaje */
+.message-wrapper {
+  display: flex;
+  margin-bottom: 12px;
+  max-width: 80%;
+}
+
+/* Mensajes propios (derecha) */
+.message-wrapper.own-message {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+/* Mensajes del otro (izquierda) */
+.message-wrapper.other-message {
+  align-self: flex-start;
+}
+
+/* Avatar del usuario */
+.message-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  align-self: flex-end;
+}
+
+.message-wrapper.own-message .message-avatar {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+/* Contenedor del contenido del mensaje */
+.message-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: #c7c4c4;
+  margin-left: 5px;
+  font-size: 1.1rem;
+}
+
+/* Nombre del remitente */
+.message-sender {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #667781;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+/* Burbuja del mensaje */
+.message-bubble {
+  padding: 8px 12px;
+  border-radius: 7.5px;
+  position: relative;
+  word-break: break-word;
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para mensajes propios */
+.message-bubble.own {
+  background-color: #d9fdd3;
+  border-top-right-radius: 0;
+  margin-left: 20px;
+}
+
+/* Estilo para mensajes del otro */
+.message-bubble.other {
+  background-color: white;
+  border-top-left-radius: 0;
+  margin-right: 20px;
+}
+
+/* Texto del mensaje */
+.message-text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pie del mensaje (hora y estado) */
+.message-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 4px;
+  gap: 4px;
+}
+
+/* Hora del mensaje */
+.message-time {
+  font-size: 11px;
+  color: #667781;
+  line-height: 1;
+}
+
+.message-bubble.own .message-time {
+  color: #00a884;
+}
+
+/* Estado de lectura */
+.read-status {
+  font-size: 11px;
+  color: #667781;
+  line-height: 1;
+}
+
+.read-status.read {
+  color: #34b7f1;
+}

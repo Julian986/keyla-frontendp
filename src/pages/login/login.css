@@ -1,0 +1,89 @@
+.formContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.loginForm {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos para los inputs */
+.formInput {
+    border: none !important;
+    border-bottom: 1px solid grey !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+  }
+  
+  /* Estilos para el estado focus */
+  .formInput:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid grey !important;
+  }
+  
+  /* Estilo para errores */
+  .formInput.border-red-500 {
+    border-bottom: 1px solid red !important;
+  }
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 472px;
+    padding: 20px;
+    background: black;
+    border-radius: 18px;
+   /*  border: 2px solid #1f1e1e; */
+}
+
+.loginTitle {
+    color: white;
+    margin-top: 11px;
+    margin-bottom: 20px;
+}
+
+.submitButton {
+    border-radius: 26px;
+    box-shadow: 3px 3px 4px #155dfc;
+    width: 100%;
+}
+
+.notRegister {
+    margin-top: 0 !important;
+    color: white;
+    padding: 10px 0;
+}
+
+.notRegister a {
+    text-decoration: none;
+}
+
+/* Estilos para los mensajes de error */
+.text-red-600 {
+    color: #dc2626;
+}
+
+.bg-red-100 {
+    background-color: #fee2e2;
+}
+
+.serverErrorContainer {
+    text-align: center;
+    position: relative;
+    bottom: 13px;
+}
+
+.serverErrorMessage {
+    color: #e61818;
+    font-size: 0.8rem;
+}

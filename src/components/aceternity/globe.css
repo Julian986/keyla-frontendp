@@ -1,0 +1,98 @@
+
+.canvasClassName {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden;
+    pointer-events: auto;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto; 
+    z-index: 4;
+    touch-action: none;
+    /* background-color: violet; */
+} 
+
+@media (min-width: 300px) {
+    .canvasClassName {
+        position: absolute;
+        width: 91% !important;
+        height: 91% !important;
+        overflow: hidden;
+        pointer-events: auto;
+        top: 38px;
+        left: 0px;
+        right: 5px;
+        margin: 0 auto; 
+      /*   top: 36px;
+        left: 102px; */
+
+        z-index: 4;
+        touch-action: none;
+        /* background-color: violet; */
+    } 
+    
+}
+@media (min-width: 400px) {
+    .canvasClassName {
+        position: absolute;
+        width: 82% !important;
+        height: 82% !important;
+        overflow: hidden;
+        pointer-events: auto;
+        top: 35px;
+        left: 0px;
+        right: 0;
+        margin: 0 auto; 
+      /*   top: 36px;
+        left: 102px; */
+
+        z-index: 4;
+        touch-action: none;
+        /* background-color: violet; */
+    } 
+    
+}
+
+@media (min-width: 485px) {
+    .canvasClassName {
+        position: absolute;
+        width: 70% !important;
+        height: 70% !important;
+        overflow: hidden;
+        pointer-events: auto;
+        top: 39px;
+        left: 0px;
+        right: 0;
+        margin: 0 auto; 
+      /*   top: 36px;
+        left: 102px; */
+
+        z-index: 4;
+        touch-action: none;
+        /* background-color: violet; */
+    } 
+    
+}
+
+@media (min-width: 540px) {
+    .canvasClassName {
+        position: absolute;
+        width: 37% !important;
+        height: 37% !important;
+        overflow: hidden;
+        pointer-events: auto;
+        top: 159px;
+        left: 0px;
+        right: 0;
+        margin: 0 auto; 
+      /*   top: 36px;
+        left: 102px; */
+
+        z-index: 4;
+        touch-action: none;
+        /* background-color: violet; */
+    } 
+    
+}

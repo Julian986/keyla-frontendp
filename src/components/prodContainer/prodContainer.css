@@ -1,0 +1,43 @@
+
+
+.miCont {
+    background-color: black;
+    padding-left: 10px;
+     width: 100%; 
+}
+
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 1fr; /* Esto hace que todas las filas tengan la misma altura */
+    gap: 20px; /* Espacio uniforme entre cards */
+    width: 100%;
+  }
+  
+  /* Asegúrate que todas las cards ocupen todo el espacio disponible */
+  .lacolDelaCard {
+    display: flex;
+    height: 100%;
+    margin: 11px 0px;
+  }
+  
+  .myCardContainer {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .noProductsFound {
+    color: rgb(168, 177, 185) !important;
+  }
+
+
+
+@media (min-width: 768px) {
+   .lacolDelaCard {
+    display: flex;
+    height: 100%;
+    margin: 62px 0px;
+  }
+}

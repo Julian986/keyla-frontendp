@@ -1,0 +1,263 @@
+
+.btBottom{
+  background: none !important;
+    border: 1px solid #333 !important;
+    margin-right: 8px;
+    border-radius: 12px;
+}
+
+.btBottom2{
+  font-size: 0.8rem !important;
+}
+
+.elSelectDelDinero {
+  margin-top: 0 !important;
+}
+
+.laMarquita {
+  color: #bebebe;
+  border: 1px solid #333 !important;
+  width: 87vw;
+}
+
+.elColorsitogrey {
+  color: #868686;
+}
+
+.elColorsitoAmarillo {
+  color: #9c865d !important;
+}
+
+
+.productDetailWrapper {
+  color: white;
+}
+
+.productContainerDetail {
+  border: 2px solid #242222;
+  background: #070707 !important;
+}
+
+.colorGrey {
+  color: #c6c6c6;
+}
+
+/* Estilos específicos para los inputs del formulario */
+.productDetailWrapper input,
+.productDetailWrapper textarea,
+.productDetailWrapper select {
+  background-color: #1a1a1a;
+  color: #bebebe;
+  border: 1px solid #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.productDetailWrapper input:focus,
+.productDetailWrapper textarea:focus,
+.productDetailWrapper select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.productDetailWrapper input::placeholder,
+.productDetailWrapper textarea::placeholder {
+  color: #666;
+}
+
+/* Estilos para el área de carga de imágenes */
+.productContainerDetail label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.productContainerDetail label div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el modal del rotador */
+.rotator-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.rotator-modal .rotator-container {
+  background-color: black;
+  border: 1px solid rgba(128, 128, 128, 0.5) !important;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 390px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+
+/* Estilos para los botones */
+button[type="submit"] {
+  transition: background-color 0.3s ease;
+}
+
+
+button[type="button"] {
+  transition: background-color 0.3s ease;
+  color: white;
+  background-color: transparent;
+}
+
+button[type="button"]:hover {
+  background-color: #333 !important;
+}
+
+/* Estilos para las especificaciones técnicas */
+.spec-input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.spec-input-group span {
+  min-width: 120px;
+}
+
+/* Selector de moneda */
+.currency-selector {
+  margin-top: 1.5rem;
+}
+
+.currency-selector select {
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #333;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Previsualización del precio formateado */
+.price-preview {
+  font-size: 0.875rem;
+  color: #c6c6c6;
+  margin-top: 0.25rem;
+}
+
+.currencyTypeSelect {
+  background-color: #000 !important;
+  cursor: pointer;
+  border: 1px solid #333 !important;
+}
+
+.laDescriptionDelProduct {
+  border: 1px solid rgb(51, 51, 51) !important;
+}
+
+.monedaType {
+  cursor: pointer;
+}
+
+
+/* Estilos para el área de subida de imágenes */
+.image-upload-container {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.upload-area {
+  border: 2px dashed #7507bb !important;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.upload-area:hover {
+  border-color: #6366f1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.upload-area.has-image {
+  padding: 0;
+  border: 2px dashed #484848;
+  background-color: transparent;
+  min-height: auto;
+}
+
+.upload-instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.upload-icon {
+  width: 48px;
+  height: 48px;
+  fill: #a09b9b;
+}
+
+.upload-text {
+  color: #a09b9b;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.upload-hint {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.uploaded-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.error-message {
+  color: var(--color-red-500);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Media queries para responsive */
+@media (max-width: 640px) {
+  .upload-area {
+    min-height: 200px;
+    padding: 1rem;
+  }
+  
+  .upload-text {
+    font-size: 0.875rem;
+  }
+  
+  .upload-hint {
+    font-size: 0.75rem;
+  }
+}

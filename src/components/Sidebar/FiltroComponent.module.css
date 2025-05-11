@@ -1,0 +1,279 @@
+
+
+
+.closeButtonsitoski {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: auto; /* Empuja el botón a la derecha */
+  transition: color 0.2s;
+  position: absolute;
+  right: 19px;
+  color: white;
+}
+
+.closeButtonsitoski:hover {
+  color: #333;
+}
+
+
+
+.filtroContainer {
+  width: 280px;
+    background: none;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+    z-index: 1000;
+    border: 1px solid #4a5568;
+    margin-left: 5px;
+}
+
+.mobileFilterButton {
+  display: none;
+  width: 100%;
+  padding: 12px;
+  background-color: none; /* Azul más claro para modo oscuro */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  border: 1px solid rgba(128, 128, 128, 0.5) !important;
+}
+
+.filtroContent {
+  display: block;
+}
+
+.filtroHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filtroHeader h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #e2e8f0; /* Texto claro */
+}
+
+.limpiarButton {
+  background: none;
+  border: none;
+  color: #4299e1; /* Azul claro */
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  
+}
+
+.limpiarButton:hover {
+  color: #63b3ed; /* Azul más claro al hover */
+}
+
+.filtroSeccion {
+  margin-bottom: 25px;
+}
+
+.filtroSeccion h4 {
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+  color: #cbd5e0; /* Texto gris claro */
+}
+
+.subcategoriaList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos para los elementos de radio button */
+.radioListItem {
+  margin-bottom: 12px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 32px;
+  min-height: 24px;
+  transition: color 0.2s ease;
+  color: #e2e8f0; /* Texto claro */
+}
+
+.radioLabel:hover {
+  color: #ffffff; /* Texto blanco al hover */
+}
+
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radioMark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #919191; /* Borde gris oscuro */
+  border-radius: 50%;
+  background: none; /* Fondo oscuro */
+  transition: all 0.2s ease;
+}
+
+.radioText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 8px;
+}
+
+/* .radioMark.activo {
+  border-color: #000dff;
+  background: #000dff;
+} */
+
+.radioMark.activo::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 83%;
+  background: #c2c2c2;
+}
+
+.radioLabel:hover .radioMark {
+  border-color: #63b3ed; /* Azul más claro al hover */
+}
+
+.cantidad {
+  color: #a0aec0; /* Texto gris más claro */
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+/* Estilos para el rango de precio */
+.rangoPrecioContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rangoInput {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #4a5568; /* Fondo gris oscuro */
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.rangoInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #4299e1; /* Azul claro */
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #2d3748; /* Borde oscuro */
+  transition: all 0.2s ease;
+}
+
+.rangoInput::-webkit-slider-thumb:hover {
+  background: #63b3ed; /* Azul más claro al hover */
+  transform: scale(1.1);
+}
+
+.rangoInput::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #4299e1;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #2d3748;
+}
+
+.rangoInput::-moz-range-thumb:hover {
+  background: #63b3ed;
+}
+
+.rangoValores {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #a0aec0; /* Texto gris claro */
+}
+
+/* Track del rango */
+.rangoInput::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #4a5568;
+  border-radius: 3px;
+}
+
+.rangoInput::-moz-range-track {
+  height: 6px;
+  background: #4a5568;
+  border-radius: 3px;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .filtroContainer {
+    width: 100%;
+    padding: 15px;
+    background-color: none; /* Fondo más oscuro en móvil */
+    border: none;
+    /* z-index: 9999;
+    position: relative; */
+  }
+  
+  .mobileFilterButton {
+    display: block;
+  }
+  
+  .filtroContent {
+    display: none;
+  }
+  
+  .mobileVisible {
+    display: block;
+  }
+}
+
+/* Efectos adicionales para modo oscuro */
+.filtroContainer {
+  transition: all 0.3s ease;
+}
+
+.filtroSeccion {
+  transition: all 0.3s ease;
+}
+
+/* Mejora de accesibilidad para modo oscuro */
+.radioInput:focus-visible + .radioMark {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.rangoInput:focus-visible {
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
+}

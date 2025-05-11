@@ -1,0 +1,19 @@
+
+.productDetailWrapper {
+    color: white;
+}
+
+.productContainerDetail {
+    border: 1px solid rgb(176 170 170 / 50%) !important;
+    background: none !important;
+}
+
+.colorGrey {
+    color:#c6c6c6;
+}
+
+.butonWithSeller {
+    background: none !important;
+    border: 1px solid rgba(128, 128, 128, 0.5) !important;
+    border-radius: 14px;
+}

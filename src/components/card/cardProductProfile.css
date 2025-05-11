@@ -1,0 +1,401 @@
+
+.myClasesita {
+    margin-bottom: 4rem !important;
+}
+
+.botonChat {
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 8px;
+  }
+  
+  .botonChat:hover {
+    background-color: #5649c0;
+  }
+
+.Toastify__toast-container {
+    z-index: 60000 !important;
+  }
+
+  .elFaEdit {
+    position: relative;
+    top: 3px;
+  }
+.myCardContainer {
+    width: 100%;
+    max-width: 300px;
+    height: auto; /* Altura flexible */
+    min-height: 400px; /* Altura mínima como respaldo */
+    cursor: pointer;
+    position: relative;
+    margin: 0 auto 22px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-radius: 11px;
+    overflow: visible;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+   /*  min-height: fit-content; */
+}
+
+.myCardContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.cardDataContainer {
+    width: 100%;
+}
+
+.cardFront, .cardBack {
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 20px; 
+    min-height: fit-content;
+}
+
+/* Rotación de la tarjeta */
+.myCardContainer.flipped .cardFront {
+    transform: rotateY(180deg);
+}
+
+.myCardContainer.flipped .cardBack {
+    transform: rotateY(0deg);
+}
+
+
+/* Diseño del frente */
+.cardFront {
+    background: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    align-items: center;
+    transform: rotateY(0deg);
+    padding-bottom: 20px; /* Espacio inferior */
+    border: 1px solid #292929;
+}
+
+.homeCardTitle {
+    margin-top: 4px;
+    margin-bottom: 21px;
+    color: #dcd5d5;
+}
+
+/* Contenedor de imagen profesional */
+.imagenContainer {
+    width: 100%;
+    min-height: 200px; /* Altura mínima */
+    max-height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    padding: 20px; /* Espacio alrededor de la imagen */
+    flex-shrink: 0; /* Evita que se encoja demasiado */
+}
+
+.imagenContainer img {
+    max-width: 100%;
+    max-height: 146px; /* Altura máxima para imágenes muy altas */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.cardDataContainer {
+    width: 100%;
+    min-height: 150px;
+    padding: 0 15px;
+    margin-top: auto;
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio */
+}
+
+.dataCard {
+    width: 100%;
+    padding: 0 15px;
+    margin-top: auto;
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio */
+}
+
+/* Efecto hover para desktop */
+@media (hover: hover) {
+    .myCardContainer:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    
+    .myCardContainer:hover .imagenContainer img {
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .imagenContainer {
+        min-height: 150px;
+        max-height: 175px;
+        padding: 15px;
+    }
+    .myCardContainer {
+        min-height: 380px;
+        margin-bottom: 123px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imagenContainer {
+        min-height: 150px;
+        max-height: 170px;
+        padding: 10px;
+    }
+    
+    .myCardContainer {
+        min-height: 380px;
+    }
+}
+
+
+
+/* Parte trasera */
+
+/* Agrega estos estilos a tu CSS existente */
+.sellerInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .disabledButton {
+    opacity: 0.6;
+    cursor: not-allowed !important;
+    transform: none !important;
+  }
+  
+  .disabledButton:hover {
+    background: inherit !important;
+    box-shadow: none !important;
+  }
+  
+  /* Mantén todos tus estilos existentes iguales */
+
+  
+/* Diseño de la parte trasera */
+.cardBack {
+    background: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #292929;
+    padding: 15px;
+    transform: rotateY(-180deg);
+}
+
+/* Foto del usuario */
+.userImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/* Contenedor de estadísticas */
+.statsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Cada estadística */
+.statItem {
+    text-align: center;
+    flex: 1;
+}
+
+.statNumber {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.statLabel {
+    display: block;
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+
+.starContainer {
+    font-size: 26px;
+    position: absolute;
+    z-index: 9000;
+    top: 6px;
+    right: 10px;
+    color: #c5b9b9;
+}
+
+.starFavourite {
+    color: #fff !important;
+}
+
+.cardDescription {
+    color: grey;
+    margin: 9px;
+}
+
+.lineSeparator {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.textLila {
+    color: #bebdc2;
+}
+
+.textYellow {
+    color: #b8b7b6;
+}
+
+.dataCard {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.cardPrice {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.contenedorBotones {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto; /* Empuja los botones hacia abajo */
+    padding-top: 15px; /* Espacio arriba de los botones */
+}
+
+.botonComprar {
+    color: white;
+    padding: 4px 30px;
+    cursor: pointer;
+    z-index: 5000;
+    border-radius: 7px;
+    width: 82%;
+    margin: auto;
+    margin-bottom: 10px;
+
+    border: 1px solid rgba(128, 128, 128, 0.5) !important;
+    background: none !important;
+    box-shadow: 0 2px 6px rgb(128 58 255 / 40%);
+}
+
+.botonAgregar {
+    color: white;
+    padding: 4px 30px;
+    cursor: pointer;
+    z-index: 5000;
+    border-radius: 7px;
+    width: 82%;
+    margin: auto;
+    margin-bottom: 10px;
+
+    border: 1px solid rgba(128, 128, 128, 0.5) !important;
+    background: none !important;
+    box-shadow: 0 2px 6px rgb(128 58 255 / 40%);
+}
+
+.linkToSeller {
+    text-decoration: none !important;
+}
+
+.h6sellerName {
+    text-align: center;
+}
+
+.sellerActionButton {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1;
+    margin: 0 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .visitButton {
+    background: none;
+    color: #ddd;
+    border: 1px solid #444;
+    box-shadow: 0 2px 4px rgba(58, 134, 255, 0.3);
+  }
+  
+  .visitButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+  }
+
+  .chatButton {
+    background: none;
+    color: white;
+    box-shadow: 0 2px 4px rgba(58, 134, 255, 0.3);
+    border: 1px solid rgba(128, 128, 128, 0.5) !important;
+  }
+  
+  .chatButton:hover {
+    background: #2667cc;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(58, 134, 255, 0.4);
+  }
+
+
+  .viewProduct {
+    background: none;
+    padding: 5px 19px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 5px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(58, 134, 255, 0.3);
+  }
+  
+  .viewProduct:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(58, 134, 255, 0.4);
+}

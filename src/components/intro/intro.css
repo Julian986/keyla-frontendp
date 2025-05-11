@@ -1,0 +1,104 @@
+.home-section {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-height: calc(100vh - 80px); /* Ajusta según header */
+  margin-top: 80px; /* Altura del header */
+  padding: 20px 0;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.techP {
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+}
+
+.techP2 {
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
+}
+
+.home {
+  margin-top: 34px;
+}
+
+.home-content {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.crypto-link {
+  text-decoration: none;
+}
+
+.btnExploreContainer {
+  width: 100%;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+}
+
+.btnExplore {
+  background-color: #10179c !important;
+  border-color: black !important;
+  color: white;
+  padding: 4px 30px;
+  cursor: pointer;
+  position: relative; /* Cambiado de absolute a relative */
+  z-index: 1;
+  border-radius: 7px;
+  background-color: #000dff !important;
+  box-shadow: 2px 2px 2px blue;
+  margin-top: 20px; /* Espacio adicional */
+}
+
+.myButton {
+  background-color: red;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  
+  .home-section {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding: 20px 0;
+    position: relative;
+    bottom: 81px;
+  }
+}
+
+  /* Para celulares (menos de 768px) */
+  @media (max-width: 768px) {
+  .home-section{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    margin-top: 0;
+    padding: 20px 0;
+    position: relative;
+    bottom: 37px;
+  }
+}

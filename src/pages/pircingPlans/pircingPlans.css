@@ -1,0 +1,165 @@
+
+
+.planContainer {
+    background: none !important;
+    border: 1px solid rgba(128, 128, 128, 0.5) !important;
+}
+
+/* Estructura base del botón de fuego */
+.flame-button {
+    position: relative;
+    background: linear-gradient(
+      45deg,
+      #f97316,  /* orange-500 */
+      #ef4444,  /* red-500 */
+      #eab308   /* yellow-500 */
+    );
+    color: white;
+    border: none;
+    border-radius: 0.375rem; /* equivalente a rounded-md */
+    padding: 0.75rem 0; /* equivalente a py-3 */
+    font-weight: 500; /* equivalente a font-medium */
+    width: 32%;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+  }
+
+  /* Animación de parpadeo como fuego real */
+@keyframes flameFlicker {
+    0%, 100% {
+      opacity: 0.8;
+      background-position: 0% 50%;
+    }
+    25% {
+      opacity: 0.9;
+      background-position: 25% 50%;
+    }
+    50% {
+      opacity: 1;
+      background-position: 50% 50%;
+    }
+    75% {
+      opacity: 0.7;
+      background-position: 75% 50%;
+    }
+  }
+  
+  /* Animación de partículas de fuego */
+  @keyframes flameParticles {
+    0% {
+      transform: translateY(0) translateX(-10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-20px) translateX(10px);
+      opacity: 0;
+    }
+  }
+
+
+  /* Efecto de partículas de fuego */
+.flame-button::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 165, 0, 0.6),
+      rgba(255, 255, 0, 0.6),
+      rgba(255, 69, 0, 0.6),
+      transparent
+    );
+    border-radius: 50%;
+    filter: blur(5px);
+    animation: flameParticles 1.5s infinite linear;
+    z-index: -1;
+  }
+  
+  .flame-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      rgba(249, 115, 22, 0.8),
+      rgba(239, 68, 68, 0.8),
+      rgba(234, 179, 8, 0.8)
+    );
+    z-index: -1;
+    animation: flameFlicker 3s infinite alternate;
+  }
+
+
+  /* Efectos al pasar el mouse */
+.flame-button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6);
+    animation: none; /* Detenemos la animación principal en hover */
+  }
+  
+  .flame-button:hover::after {
+    background: linear-gradient(
+      45deg,
+      rgba(249, 115, 22, 0.9),
+      rgba(239, 68, 68, 0.9),
+      rgba(234, 179, 8, 0.9)
+    );
+    animation: flameFlicker 1s infinite alternate; /* Animación más rápida en hover */
+  }
+  
+  .flame-button:hover::before {
+    animation: flameParticles 1s infinite linear;
+    height: 25px;
+    top: -15px;
+  }
+
+  .botonPlan {
+    border: 1px solid rgba(128, 128, 128, 0.5) !important;
+  }
+
+  .botonPlan2 {
+    border: 1px solid rgba(128, 128, 128, 0.5) !important;
+  }
+
+  .botonPlan:hover {
+    background: rgb(29, 29, 29);
+}
+    
+    .botonPlan2:hover {
+      background: rgb(29, 29, 29);
+  }
+
+
+  .buttonToggleLanguage {
+    background: none;
+    border: 1px solid #b0a8a8;
+    position: relative;
+    bottom: 10px;
+    color: wheat !important;
+  }
+  @media (max-width: 768px) {
+    .flame-button {
+      width: 55% !important;
+    }
+  }
+  
+  @media (min-width: 1113px) {
+    .buttonToggleLanguage {
+      background: none;
+      border: 1px solid #b0a8a8;
+      position: relative;
+      top: 25px;
+      color: wheat !important;
+    }
+    
+}

@@ -1,0 +1,166 @@
+.shoppingContainer {
+    background-color: #000000; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    border-left: 1px solid #333; /* Borde lateral sutil */
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3); /* Sombra lateral */
+    z-index: 999;
+    height: 100vh;
+    padding-right: 1px;
+  }
+  
+  .shoppingContainer h2 {
+    color: #ffffff; /* Texto blanco para el título */
+  }
+  
+  .shoppingContainer button {
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  }
+
+  .elButtonDelTrash{
+    position: relative;
+    bottom: 22px;
+    left: 20px;
+  }
+    
+  .containerBotonCompra {
+    width: 100%;
+    text-align: center;
+  }
+
+  .eldeOnclose{
+    position: relative;
+    left: 23px;
+  }
+
+  .botonSeguirComprando{
+    background: none;
+    border: 1px solid rgb(176 170 170 / 50%) !important;
+    border-radius: 17px;
+  }
+
+  .linkFinalizarCompra {
+    color: white;
+  }
+
+  .elSpanTotal{
+    position: relative;
+    bottom: 7px;
+  }
+
+  .eldivsito{
+    padding-right: 0px;
+    margin: 11px;
+  }
+
+  .eldivsito2{
+    margin: 6px;
+  }
+
+  .botonFinalizarCompra{
+    background: none;
+    border: 1px solid rgb(185 184 184 / 50%) !important;
+    border-radius: 22px;
+    position: relative;
+    bottom: 15px;
+    box-shadow: 0 2px 6px rgb(128 58 255 / 40%);
+    width: 90%;
+  }
+  .shoppingContainer button:hover {
+    transform: scale(1.05); /* Efecto hover: escala ligeramente */
+  }
+  
+  /* Estilos para los items del carrito */
+  .shoppingContainer .item {
+    background-color: #000000; /* Fondo oscuro para cada item */
+    border: 1px solid rgb(185 184 184 / 50%) !important; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .shoppingContainer .item:hover {
+    background-color: #333; /* Fondo más claro al hacer hover */
+  }
+  
+  /* Botón de eliminar */
+  .shoppingContainer .deleteButton {
+    background-color: #ff4444; /* Rojo vibrante */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .shoppingContainer .deleteButton:hover {
+    background-color: #cc0000; /* Rojo más oscuro al hacer hover */
+  }
+  
+  /* Botones de acción */
+  .shoppingContainer .actionButton {
+    background-color: #d8d2d2;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    padding: 4px 10px;
+    width: 100%;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .shoppingContainer .actionButton:hover {
+    background-color: #45a049; /* Verde más oscuro al hacer hover */
+  }
+  
+  .shoppingContainer .actionButton:disabled {
+    background-color: #666; /* Fondo gris para botones deshabilitados */
+    cursor: not-allowed;
+  }
+  
+  /* Botón "Seguir Comprando" */
+  .shoppingContainer .continueButton {
+    background-color: transparent;
+    color: #4caf50; /* Verde vibrante */
+    border: 2px solid #4caf50;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .shoppingContainer .continueButton:hover {
+    background-color: #4caf50; /* Fondo verde al hacer hover */
+    color: white;
+  }
+  
+  /* Scrollbar personalizada */
+  .shoppingContainer ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .shoppingContainer ::-webkit-scrollbar-track {
+    background: #333; /* Fondo oscuro para la barra de scroll */
+  }
+  
+  .shoppingContainer ::-webkit-scrollbar-thumb {
+    background: #666; /* Color del thumb */
+    border-radius: 4px;
+  }
+  
+  .shoppingContainer ::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Color del thumb al hacer hover */
+  }
+
+  .subTotal {
+    font-size: 1.2rem;
+  }
+
+
+  @media (max-width: 768px) {
+     .shoppingContainer {
+      height: 100vh;
+      background: #000;
+      width: 100%;
+    } 
+  }

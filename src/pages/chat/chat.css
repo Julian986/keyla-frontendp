@@ -1,0 +1,184 @@
+/* chat.css */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #050505;
+  background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png');
+  position: relative;
+}
+
+
+.chat-header {
+  background-color: none;
+  border-bottom: 1px solid #4f4e4e;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  
+  padding: 10px 16px 10px 70px;
+  width: 100%;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 0;
+  width: 100%;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0; 
+}
+
+.participants-info {
+  flex: 1; 
+  min-width: 0; 
+}
+
+.chat-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  word-break: break-word; 
+  white-space: normal; 
+  overflow: visible; 
+  text-overflow: clip; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  line-height: 1.4; 
+}
+
+.chat-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #667781;
+}
+
+
+
+
+.messages-area {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-attachment: fixed;
+}
+
+.message-input-area {
+  display: flex;
+  padding: 10px;
+  background-color: black;
+  border-top: 1px solid #4f4e4e;
+  position: sticky;
+  bottom: 0;
+}
+
+.message-input-area input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 15px;
+  background-color: #0e0e0e;
+  margin-right: 10px;
+  color: white;
+}
+
+.message-input-area button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #161416;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  position: relative;
+  top: 4px;
+}
+
+.message-input-area button:disabled {
+  background-color: #141414;
+  cursor: not-allowed;
+}
+
+/* Estilos para la barra de scroll */
+.messages-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages-area::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.messages-area::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+
+/* Color del placeholder */
+
+.message-input-area input::placeholder {
+  color: rgba(215, 206, 206, 0.724); /* Cambia esto por el color que desees */
+  opacity: 1; /* Asegura que el color se muestre correctamente en Firefox */
+}
+
+/* Para navegadores más antiguos */
+.message-input-area input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(215, 206, 206, 0.724);
+}
+.message-input-area input::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(215, 206, 206, 0.724);
+  opacity: 1;
+}
+.message-input-area input:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(215, 206, 206, 0.724);
+}
+.message-input-area input:-moz-placeholder { /* Firefox 18- */
+  color: rgba(215, 206, 206, 0.724);
+  opacity: 1;
+}
+
+
+
+@media (max-width: 480px) {
+  .chat-header {
+    padding-left: 72px;
+  }
+  
+  .product-image {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .chat-header h3 {
+    font-size: 14px;
+    -webkit-line-clamp: 3; /* Más líneas en móviles */
+  }
+}

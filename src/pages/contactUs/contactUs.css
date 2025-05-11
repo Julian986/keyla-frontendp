@@ -1,0 +1,140 @@
+.contactus-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .contactus-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .contactus-title {
+    font-size: 1.5rem;
+    color: #b6b6b6;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .contactus-description {
+    font-size: 1.1rem;
+    color: #ccc3c3;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+
+
+  .contactus-icon.instagram-icon {
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  }
+  
+  /* Asegúrate que los métodos de contacto se muestren en grid de 3 columnas */
+  .contactus-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .language-toggle-btn{
+    padding: 2px 32px;
+    color: wheat;
+    border: 1px solid rgba(128, 128, 128, 0.5) !important;
+  }
+
+  .elInstaColor {
+    color: white;
+  }
+  
+  .contactus-methods {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .contactus-card {
+    background: none;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.5) !important;
+  }
+  
+  .contactus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .contactus-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .email-icon {
+    background-color: #fce8e6;
+    color: #d93025;
+  }
+  
+  .whatsapp-icon {
+    background-color: #00f15a;
+    color: white;
+  }
+  
+  .contactus-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .contactus-method-title {
+    font-size: 1.25rem;
+    color: #b6b6b6;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .contactus-link {
+    display: block;
+    color: #3182ce;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .contactus-link:hover {
+    color: #2c5282;
+  }
+  
+  .contactus-response-time {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contactus-methods {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .contactus-card {
+      width: 100%;
+      min-width: 85vw;
+      max-width: 350px;
+    }
+  }

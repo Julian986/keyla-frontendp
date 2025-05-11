@@ -1,0 +1,328 @@
+.contenedorCardForm {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjetaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 550px;
+  margin-top: 20px;
+}
+
+.avisoh5 {
+  text-align: center;
+  color: #949494;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.linkContactoAviso {
+  text-decoration: none;
+  color: #3b82f6;
+}
+
+.botonCambioEspanish {
+  color: white;
+  padding: 6px 30px;
+  cursor: pointer;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  background: none;
+  color: wheat;
+  box-shadow: 0 2px 6px rgba(58, 94, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.botonCambioEspanish:hover {
+  background: #1d4ed8;
+}
+
+/* Estilos de la tarjeta */
+.tarjeta {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  position: relative;
+  color: #fff;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.tarjeta.active {
+  transform: rotateY(180deg);
+}
+
+.delantera, .trasera {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  background: url(../../assets/bg-tarjeta/bg-tarjeta-02.jpg);
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+}
+
+.trasera {
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+/* Contenido tarjeta delantera */
+.delantera .logo-marca {
+  text-align: right;
+  height: 40px;
+}
+
+.delantera .logo-marca img {
+  height: 100%;
+  width: auto;
+  max-width: 80px;
+}
+
+.delantera .chip {
+  width: 44px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.delantera .grupo .label {
+  font-size: 14px;
+  color: #7d8994;
+  margin-bottom: 5px;
+}
+
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.delantera .flexbox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nombreContainer {
+  min-width: 0;
+  flex: 1;
+}
+
+/* Contenido tarjeta trasera */
+.barra-magnetica {
+  height: 40px;
+  background: #000;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.datos2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.grupo1 {
+  flex: 2;
+  margin-right: 15px;
+}
+
+.grupo2 {
+  flex: 1;
+}
+
+.firma {
+  height: 30px;
+  background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+  border-radius: 5px;
+}
+
+.ccv {
+  position: relative;
+  top: 7px;
+}
+
+.ccv2 {
+  background: #fff;
+  height: 30px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.leyenda {
+  font-size: 11px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.link-banco {
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* Botón de abrir formulario */
+.contenedor-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: -25px;
+  z-index: 10;
+}
+
+.btn-abrir-formulario {
+  width: 50px;
+  height: 50px;
+  background: #002dc7 !important;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(24, 56, 182, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-abrir-formulario:hover {
+  background: #1850b1;
+}
+
+/* Formulario */
+.formContainer {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.formWrapper {
+  background: #0a0a0a;
+  border-radius: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 25px 20px;
+  width: 100%;
+}
+
+.loginTitle {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.mb4 {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  color: #d1d5db;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.7rem;
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.flexContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.7rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Transición del formulario */
+.formulario-tarjeta {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.formulario-tarjeta.visible {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+/* Media Queries para móviles */
+@media (max-width: 480px) {
+  .tarjeta {
+    height: 220px;
+  }
+  
+  .delantera, .trasera {
+    padding: 15px;
+  }
+  
+  .delantera .grupo .numero,
+  .delantera .grupo .nombre,
+  .delantera .grupo .expiracion {
+    font-size: 16px;
+  }
+  
+  .flexContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .formWrapper {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tarjetaContainer {
+    margin-top: 10px;
+  }
+  
+  .avisoh5 {
+    font-size: 0.8rem;
+  }
+}

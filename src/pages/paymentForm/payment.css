@@ -1,0 +1,178 @@
+.formContainerPayment {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    padding: 1rem;
+}
+
+.formWrapperPayment {
+    background: #000000;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #afb5bd;
+    margin: 1rem;
+}
+
+.paymentTitle {
+    color: #e2e8f0;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.paymentMethods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.methodCard {
+    background: #000000;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #545454ab;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.methodCard:hover {
+    background: #475569;
+    transform: translateY(-2px);
+}
+
+.methodCard.selected {
+    border-color: #818cf8;
+    background: #475569;
+    box-shadow: 0 4px 6px rgba(129, 140, 248, 0.1);
+}
+
+.methodIcon {
+    color: #818cf8;
+    margin-bottom: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.methodIcon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.methodTitle {
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    word-break: break-word;
+}
+
+.submitButtonPayment {
+    width: 100%;
+    padding: 0.8rem;
+    background: #818cf8;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.5) !important;
+    font-size: 0.9rem;
+}
+
+.submitButtonPayment:hover:not(:disabled) {
+    background: #6366f1;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+}
+
+.submitButtonPayment:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.securityNote {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+.securityNote svg {
+    color: #4ade80;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.errorMessage {
+    color: #f87171;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .formWrapperPayment {
+        padding: 1.2rem;
+        margin: 0.5rem;
+        border-radius: 0.8rem;
+    }
+    
+    .paymentTitle {
+        font-size: 1.3rem;
+        margin-bottom: 2.2rem;
+    }
+    
+    .paymentMethods {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .methodCard {
+        padding: 0.8rem;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        min-height: auto;
+    }
+    
+    .methodIcon {
+        margin-bottom: 0;
+        margin-right: 0.8rem;
+    }
+    
+    .methodIcon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .submitButtonPayment {
+        padding: 0.7rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .paymentMethods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

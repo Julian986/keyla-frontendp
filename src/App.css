@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+    width: 100%;
+    background-color: black;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
