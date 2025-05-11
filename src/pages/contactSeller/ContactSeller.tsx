@@ -4,7 +4,7 @@ import axios from "axios";
 import { AuthContext } from "@/context/AuthContext";
 import { FiMessageCircle } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
-import "./ContactSeller.css";
+import "./contactSeller.css"
 
 import { useToast } from "@/context/ToastContext";
 
