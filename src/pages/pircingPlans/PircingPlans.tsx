@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import './pircingPlans.css'
 import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
+import Footer from "@/components/Footer/Footer";
 
 type Language = "es" | "en";
 
