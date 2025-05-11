@@ -2,9 +2,9 @@ import { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Header from "@/components/header/Header";
-import Footer from "@/components/footer/Footer";
+import Footer from "@/components/Footer/Footer";
 import { AuthContext } from "@/context/AuthContext";
-import "./ChatList.css";
+import "./chatList.css"
 
 interface Chat {
   _id: string;
