@@ -41,6 +41,12 @@ const ChatList = () => {
   const auth = useContext(AuthContext);
   const navigate = useNavigate();
 
+    useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }, []);
   
   useEffect(() => {
     const fetchChats = async () => {

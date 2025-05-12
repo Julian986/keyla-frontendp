@@ -34,7 +34,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
   // Función para manejar el click en el botón de chat
   const handleChatClick = async () => {
     if (!auth?.token) {
-      showToast("Debes iniciar sesión para chatear con el vendedor");
+      showToast("You must log in to chat with the seller.");
       return;
     }
 
