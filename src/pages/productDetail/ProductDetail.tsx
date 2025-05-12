@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Product } from '../../types/productType';
 import './productDetail.css';
 import Header from '../../components/header/Header';
@@ -15,6 +15,13 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
   const auth = useContext(AuthContext);
   const navigate = useNavigate();
   const { showToast } = useToast();
+
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }, []);
 
   // Función para formatear el precio
   const formatPrice = (price: number) => {

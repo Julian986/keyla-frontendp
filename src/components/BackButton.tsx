@@ -1,5 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { TbSquareRoundedArrowLeftFilled } from "react-icons/tb";
+import { useEffect } from "react";
 
 const BackButton = () => {
   const navigate = useNavigate();
@@ -19,9 +20,18 @@ const BackButton = () => {
     location.pathname.toLowerCase().startsWith(route.toLowerCase())
   );
 
+  // Verifica si está en la ruta PaymentForm
+  const isPaymentForm = location.pathname.toLowerCase() === "/paymentform";
+
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }, []);
+
   const handleBackClick = () => {
     if (isSpecialRoute) {
-      // Para rutas especiales, navegar a una ruta específica en lugar de -1
       navigate('/chats');
     } else {
       navigate(-1);
@@ -35,7 +45,7 @@ const BackButton = () => {
       onClick={handleBackClick}
       style={{
         position: "absolute",
-        top: "42px",
+        top: isPaymentForm ? "150px" : "42px", // Condición para PaymentForm
         left: "18px",
         fontSize: "42px",
         background: "transparent",
