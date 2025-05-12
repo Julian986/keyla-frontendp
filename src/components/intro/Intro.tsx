@@ -27,23 +27,42 @@ const Intro = ({ mainRef }: IntroProps) => {
     <>
       {/* Sección principal */}
       <div className="home-section">
-        <Container>
-          <Row className="justify-content-center text-center">
-            <Col md={8}>
-              <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">Welcome to Keyla</h1>
-              <p className="techP bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">Technology Marketplace</p>
-              <p className="techP2 bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
-                Discover and share amazing content with our community
-              </p>
+  <Container>
+  <Row className="justify-content-center text-center">
+    <Col md={8}>
+      {/* Títulos con tamaños más moderados */}
+      <h1 className="
+        bg-clip-text text-transparent text-center 
+        bg-gradient-to-b from-neutral-600 to-white 
+        text-3xl md:text-3xl lg:text-5xl  // Ajuste de tamaños (antes era hasta 7xl)
+        font-sans py-4 md:py-8 relative z-20 
+        font-bold tracking-tight
+      ">
+        Welcome to Keyla
+      </h1>
 
-            {/*   <div className="btnExploreContainer">
-                <button className="btnExplore" onClick={handleScroll}>
-                  Explore
-                </button>
-              </div> */}
-            </Col>
-          </Row>
-        </Container>
+      <p className="
+        bg-clip-text text-transparent text-center 
+        bg-gradient-to-b from-neutral-600 to-white 
+        text-2xl md:text-2xl lg:text-3xl  // Reduje los tamaños
+        font-sans py-3 md:py-6 relative z-20 
+        font-bold tracking-tight
+      ">
+        Technology Marketplace
+      </p>
+
+      <p className="
+        bg-clip-text text-transparent text-center 
+        bg-gradient-to-b from-neutral-600 to-white 
+        text-xl md:text-1xl lg:text-2xl  // Texto más pequeño (para frases largas)
+        font-sans py-2 md:py-4 relative z-20 
+        font-bold tracking-tight
+      ">
+        Discover and share amazing content with our community
+      </p>
+    </Col>
+  </Row>
+</Container>
       </div>
     </>
   );
