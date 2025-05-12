@@ -35,7 +35,7 @@ const BackButton = () => {
       onClick={handleBackClick}
       style={{
         position: "absolute",
-        top: "19px",
+        top: "42px",
         left: "18px",
         fontSize: "42px",
         background: "transparent",

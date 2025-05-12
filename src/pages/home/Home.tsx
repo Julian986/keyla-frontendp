@@ -104,9 +104,9 @@ export const Home = () => {
           <MdKeyboardDoubleArrowDown className="downArrowsita" onClick={handleScroll} />
         </div>
 
-          <BackgroundLines className="backgroundLines">
+          {/* <BackgroundLines className="backgroundLines">
             <div></div>
-          </BackgroundLines>
+          </BackgroundLines> */}
         <Main ref={mainRef}>
           <FilterSidebar />
           <ProdContainer searchTerm={searchTerm} />
