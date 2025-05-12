@@ -97,10 +97,10 @@ export const Home = () => {
       <div className="myContainer">
         <div className="introContainer">
           <Intro mainRef={mainRef} />
-          <div className="globe-wrapper">
+         {/*  <div className="globe-wrapper">
             <div className="globe-loading-message">Loading Earth...</div>
             <World globeConfig={globeConfig} data={sampleData} />
-          </div>
+          </div> */}
           <MdKeyboardDoubleArrowDown className="downArrowsita" onClick={handleScroll} />
         </div>
 
