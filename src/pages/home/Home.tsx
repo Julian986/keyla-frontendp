@@ -35,6 +35,20 @@ export const Home = () => {
   const { searchTerm } = useSearch();
   const scrollExecuted = useRef(false); // Para controlar ejecución única
 
+  useEffect(() => {
+  // Forzar al navegador a no manejar el scroll automáticamente
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+
+  return () => {
+    // Restaurar el comportamiento por defecto al desmontar
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'auto';
+    }
+  };
+}, []);
+
   // Efecto principal para controlar el scroll
   useEffect(() => {
     if (scrollExecuted.current) return;
