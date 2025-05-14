@@ -54,6 +54,7 @@ interface CardProductProps {
   condition: 'Used' | 'New';
   sellerType: 'official' | 'fictional' | 'user';
   location: string;
+  isSample?: boolean
 }
 
 const SAMPLE_PRODUCTS: ApiProduct[] = [
@@ -361,8 +362,18 @@ const ProdContainer = ({ searchTerm }: ProdContainerProps) => {
         applyFilters(sampleNormalized, searchTerm, filters);
         
         // Hacer la llamada real al backend
-        const response = await axios.get<ApiProduct[]>(`${import.meta.env.VITE_BACKEND_URL}/products`);
-        
+
+        const response = await axios.get<ApiProduct[]>(`${import.meta.env.VITE_BACKEND_URL}/products`); 
+         
+
+    // Hacer la llamada real al backend con delay de 5 segundos
+    /*  const response = await new Promise<{ data: ApiProduct[] }>((resolve) => {
+      setTimeout(async () => {
+        const apiResponse = await axios.get<ApiProduct[]>(`${import.meta.env.VITE_BACKEND_URL}/products`);
+        resolve(apiResponse);
+      }, 5000); // 5000 ms = 5 segundos
+    });  */
+
         // Normalizar y actualizar los productos reales
         const validProducts = normalizeProducts(response.data);
         setProducts(validProducts);
@@ -418,6 +429,13 @@ const ProdContainer = ({ searchTerm }: ProdContainerProps) => {
   };
 
   const getSafeCardProductProps = (product: Product): CardProductProps => {
+    
+      // Verifica si el producto está en SAMPLE_PRODUCTS
+  const isSample = SAMPLE_PRODUCTS.some(sample => 
+    sample._id === product._id || 
+    (typeof sample._id === 'object' && sample._id.$oid === product._id)
+  );
+    
     return {
       className: isLoading ? 'myCardProduct loading' : 'myCardProduct',
       userId: product.seller._id,
@@ -433,13 +451,20 @@ const ProdContainer = ({ searchTerm }: ProdContainerProps) => {
       userImage: product.seller.image ?? '/default-user.jpg',
       sellerName: product.seller.name ?? 'Vendedor desconocido',
       location: product.seller.location ?? 'unknowed',
-      sellerType: product.sellerType 
+      sellerType: product.sellerType,
+      isSample
     };
   };
 
   return (
     <Container className=''>
       <Row>
+             {isLoading && (
+        <Col className="text-center py-4">
+          <LoadingDots />
+          <p className="text-muted">Loading real products...</p>
+        </Col>
+      )}
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product: Product) => {
             const cardProps = getSafeCardProductProps(product);
@@ -462,6 +487,16 @@ const ProdContainer = ({ searchTerm }: ProdContainerProps) => {
         )}
       </Row>
     </Container>
+  );
+};
+
+const LoadingDots = () => {
+  return (
+    <div className="loading-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   );
 };
 

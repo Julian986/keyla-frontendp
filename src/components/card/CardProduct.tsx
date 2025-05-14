@@ -32,6 +32,7 @@ interface CardProps {
   userImage: string;
   className?: string;
   sellerType: 'official' | 'fictional' | 'user';
+  isSample?: boolean;
 }
 
 const CardProduct = (props: CardProps) => {
@@ -44,6 +45,7 @@ const CardProduct = (props: CardProps) => {
 
   const handleChatClick = async (event: React.MouseEvent) => {
     event.stopPropagation();
+     if (props.isSample) return; 
      if (!auth?.token) {
       showToast("You must log in to chat with the seller");
       return;
@@ -69,6 +71,7 @@ const CardProduct = (props: CardProps) => {
   };
 
   const handleAddToCart = (event: React.MouseEvent) => {
+    if (props.isSample) return; 
     event.stopPropagation();
 
     const priceNumber = parseFloat(props.price);
@@ -114,7 +117,7 @@ const CardProduct = (props: CardProps) => {
 
   const handleToggleFavorite = async (event: React.MouseEvent) => {
     event.stopPropagation();
-
+    if (props.isSample) return; 
     if (!auth?.token) {
       showToast("You must log in to add products to favorites");
       return;
@@ -193,7 +196,7 @@ const CardProduct = (props: CardProps) => {
             <div className="contenedorBotones">
               {props.sellerType === 'official' ? (
                 <>
-                  <Link to="/PaymentForm">
+                  <Link to={props.isSample ? "#" : "/PaymentForm"}>
                     <button className="botonComprar">Buy</button>
                   </Link>
                   <button className="botonAgregar" onClick={handleAddToCart}> <ShoppingCart className="elShopping" /> Add to cart </button>
@@ -222,13 +225,13 @@ const CardProduct = (props: CardProps) => {
             <h6>📍{props.location}</h6>
           </div>
 
-          <Link to={`/product/${props._id}`} onClick={(e) => e.stopPropagation()}
+          <Link to={props.isSample ? "#" : `/product/${props._id}`} onClick={(e) => e.stopPropagation()}
             className="viewProduct">
             View product
           </Link>
           <div className="statsContainer">
             <Link
-              to={`/profile/${props.userId}`}
+              to={props.isSample ? "#" : `/profile/${props.userId}`}
               onClick={(e) => e.stopPropagation()}
               className="sellerActionButton visitButton"
             >
