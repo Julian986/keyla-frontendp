@@ -172,7 +172,7 @@ const ChatWindow = () => {
     }
   };
 
-  if (isLoading) return <div className="loading">Cargando chat...</div>;
+  if (isLoading) return <div className="loading">Loading chat...</div>;
   if (!chatInfo) return <div className="error">No se pudo cargar la información del chat</div>;
 
   const otherParticipant = auth?.user?._id === chatInfo.participants.seller._id 

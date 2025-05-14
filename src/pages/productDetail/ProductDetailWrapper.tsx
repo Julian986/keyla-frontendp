@@ -37,9 +37,9 @@ export const ProductDetailWrapper = () => {
       fetchProduct();
     }, [productId]);
   
-    if (loading) return <div>Cargando...</div>;
+    if (loading) return <div>Loading</div>;
     if (error) return <div>{error}</div>;
-    if (!product) return <div>Producto no encontrado</div>;
+    if (!product) return <div>Product not found</div>;
   
     return <ProductDetail product={product} />;
   };
