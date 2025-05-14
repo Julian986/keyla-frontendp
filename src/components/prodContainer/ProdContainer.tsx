@@ -109,7 +109,168 @@ const SAMPLE_PRODUCTS: ApiProduct[] = [
     condition: "Used",
     createdAt: "2025-03-19T04:40:11.250Z",
     updatedAt: "2025-03-19T04:40:11.250Z"
+  },
+
+    {
+    _id: "67f97573029284014dbf22c5",
+    name: "Samsung Galaxy S24 Ultra",
+    description: "Smartphone with built-in S Pen, 200MP camera and Snapdragon 8 Gen 3",
+    price: 1299.99,
+    stock: 4,
+    category: "Mobile Devices",
+    brand: "Samsung",
+    image: "https://res.cloudinary.com/dnnxgzqzv/image/upload/v1744377530/S9280-256TG_1-removebg-preview_zggjsc_bxcwnb.webp",
+    specifications: {
+      Display: "6.8\" Dynamic AMOLED 2X (120Hz)",
+      Processor: "Snapdragon 8 Gen 3",
+      RAM: "12GB",
+      Battery: "5000mAh",
+      "S Pen": "Included"
+    },
+    seller: {
+      _id: "67e2ad1a2097fb77f4a76cce",
+      name: "Intel Official Store"
+    },
+    sellerType: "official",
+    currencyType: "usd",
+    condition: "Used",
+    createdAt: "2025-03-30T22:32:29.753Z",
+    updatedAt: "2025-03-30T22:32:29.753Z"
+  },
+  {
+    _id: "67f97573029284014dbf22c8",
+    name: "Lenovo ThinkPad X1 Carbon Laptop",
+    description: "Professional ultrabook with 14\" 4K display and backlit keyboard",
+    price: 1599.99,
+    stock: 3,
+    category: "Laptops",
+    brand: "Lenovo",
+    image: "https://res.cloudinary.com/dnnxgzqzv/image/upload/v1744308158/StorageReview-Lenovo-Thinkpad-X1-Carbon-Gen12-3-removebg-preview_nfx3zv_ydbdwp.webp",
+    specifications: {
+      Processor: "Intel i7-1260P",
+      RAM: "16GB LPDDR5",
+      Storage: "1TB NVMe SSD",
+      Display: "14\" 4K 500nits",
+      Weight: "1.12kg"
+    },
+    seller: {
+      _id: "67f96c6c02e303fd8201dfdc",
+      name: "Lenovo Official Store"
+    },
+    sellerType: "fictional",
+    fictionalSellerIndex: 3,
+    currencyType: "usd",
+    condition: "Used",
+    createdAt: "2025-04-07T19:40:01.832Z",
+    updatedAt: "2025-04-07T19:40:01.832Z"
+  },
+  {
+    _id: "67f97573029284014dbf22cb",
+    name: "NZXT H510 Elite Case",
+    description: "Mid-tower case with tempered glass front panel and RGB",
+    price: 149.99,
+    stock: 7,
+    category: "Peripherals & Setup",
+    brand: "NZXT",
+    image: "https://res.cloudinary.com/dnnxgzqzv/image/upload/v1744304963/1611150070-eyjwyxroijoibnp4dfwvywnjb3vudhnclzq0xc80mdawnzm2xc9wcm9qzwn0c1wvmthcl2fzc2v0c1wvmtdclzmwntncl2fknjkxndrmyzkyntjkmti2zmuzzjfly2i0mte3mwrjlte1ota2odmwoteucg5nin0nzxtqev86cdrz-arn0p2n7ruakmvjz_l4kfma_ouksxq.webp",
+    specifications: {
+      "Form Factor": "ATX Mid-Tower",
+      Fans: "2x Aer RGB 2 140mm",
+      Bays: "2+1 SSD/HDD",
+      PSU: "ATX (up to 180mm)",
+      RGB: "Included controller"
+    },
+    seller: {
+      _id: "67f96c6c02e303fd8201dfda",
+      name: "NZXT Official Store"
+    },
+    sellerType: "fictional",
+    fictionalSellerIndex: 0,
+    currencyType: "usd",
+    condition: "Used",
+    createdAt: "2025-03-13T05:32:20.946Z",
+    updatedAt: "2025-03-13T05:32:20.946Z"
+  },
+  {
+    _id: "67f97573029284014dbf22ce",
+    name: "Gigabyte RX 7800 XT Gaming OC",
+    description: "1440p graphics card with Windforce 3X Cooling",
+    price: 549.99,
+    stock: 8,
+    category: "Components",
+    brand: "Gigabyte",
+    image: "https://res.cloudinary.com/dnnxgzqzv/image/upload/v1744368822/imagen_2024-07-08_163807857-removebg-preview_d4zweq_svn2d6.webp",
+    specifications: {
+      GPU: "RDNA 3",
+      VRAM: "16GB GDDR6",
+      Bus: "256-bit",
+      "Power Consumption": "263W",
+      RGB: "Fusion 2.0"
+    },
+    seller: {
+      _id: "67e2ad1a2097fb77f4a76cce",
+      name: "Gigabyte Official Store"
+    },
+    sellerType: "official",
+    currencyType: "usd",
+    condition: "Used",
+    createdAt: "2025-04-07T16:24:01.582Z",
+    updatedAt: "2025-04-07T16:24:01.582Z"
+  },
+  {
+    _id: "67f97573029284014dbf22d1",
+    name: "Shure SM7B Microphone",
+    description: "Professional dynamic vocal microphone used in studios",
+    price: 399.99,
+    stock: 2,
+    category: "Peripherals & Setup",
+    brand: "Shure",
+    image: "https://res.cloudinary.com/dnnxgzqzv/image/upload/v1744368523/750_750-SHURE_-_SM7B_-_T1121805024_-_6-removebg-preview_giqx82_colyxe.webp",
+    specifications: {
+      Type: "Cardioid dynamic",
+      "Frequency Response": "50Hz-20kHz",
+      Output: "-59dBV/Pa",
+      Weight: "765g",
+      Includes: "Anti-vibration mount"
+    },
+    seller: {
+      _id: "67f96c6c02e303fd8201dfe0",
+      name: "Shure Official Store"
+    },
+    sellerType: "fictional",
+    fictionalSellerIndex: 5,
+    currencyType: "usd",
+    condition: "Used",
+    createdAt: "2025-03-20T23:09:54.509Z",
+    updatedAt: "2025-03-20T23:09:54.509Z"
+  },
+  {
+    _id: "67f97573029284014dbf22d4",
+    name: "Secretlab Titan Evo 2023",
+    description: "Ergonomic gaming chair with magnetic lumbar support",
+    price: 529.99,
+    stock: 3,
+    category: "Peripherals & Setup",
+    brand: "Secretlab",
+    image: "https://res.cloudinary.com/dnnxgzqzv/image/upload/v1744377178/41UZRUxHa4L-removebg-preview_a2xrfl_jpnac3.webp",
+    specifications: {
+      "Weight Capacity": "130kg",
+      Adjustments: "4D (arms/back/height)",
+      Material: "SoftWeave synthetic leather",
+      Recline: "165°",
+      Warranty: "5 years"
+    },
+    seller: {
+      _id: "67e2ad1a2097fb77f4a76cce",
+      name: "Secretlab Official Store"
+    },
+    sellerType: "official",
+    currencyType: "usd",
+    condition: "Used",
+    createdAt: "2025-04-04T19:05:53.259Z",
+    updatedAt: "2025-04-04T19:05:53.259Z"
   }
+
 ];
 
 const ProdContainer = ({ searchTerm }: ProdContainerProps) => {
